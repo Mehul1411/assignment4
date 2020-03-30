@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+
+	<style type="text/css">
+		body{
+			background: lightblue;
+		}
+		li{
+			list-style-type: none;
+		}
+		h1{
+			border-bottom: 1px solid black;
+		}
+		form{
+			border: 1px solid black;
+			margin: 4px;
+			padding: 4px;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Registration Form</h1>
+	<form>
+		<label for="department">Department:</label>
+		<input type="text" id="department" name="department"><br><br>
+		<label for="fname">First name:</label>
+  		<input type="text" id="fname" name="fname"><br><br>	
+  		<label for="lname">Last name:</label>
+  		<input type="text" id="lname" name="lname"><br><br>
+  		<label for="email">Enter your email:</label>
+  		<input type="email" name="email"><br><br>
+  		<label for="email">Select your <strong>Workshop</strong>:</label><br>
+  		<input type="checkbox" name="AI">
+  		<label>AI</label>
+  		<input type="checkbox" name="VR">
+  		<label>VR</label><br><br>
+
+      <p>Please input a number between 1 and 10:</p>
+      <input id="numb">
+      <button type="button" onclick="myFunction()">Submit</button>
+      <label id="demo"></label>
+    <script>
+        function myFunction() {
+          var x, text;
+           x = document.getElementById("numb").value;
+          if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+          } else {
+            text = " ";
+          }
+         document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+<br><br>
+  		<label>Gender:</label>
+  		<ul>
+  			<li>
+  				<input type="radio" name="Gender" id="male">
+  				<label for="male">Male</label>
+  			</li>
+  			<li>
+  				<input type="radio" name="Gender" id="female">
+  				<label for="female">Female</label>
+  			</li>
+  			<li>
+  				<input type="radio" name="Gender" id="other">
+  				<label for="other">Other</label>
+  			</li>
+  		</ul><br><br>
+      <button type="Submit">Submit</button>
+      <button type="reset">Reset</button>
+	</form>
+</body>
+</html>
